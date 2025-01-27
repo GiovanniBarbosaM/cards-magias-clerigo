@@ -8,13 +8,13 @@ cartoes.forEach(cartao => {
     const cartaVirada = cartao.querySelector(".carta-virada");
 
     // virar o cartão
-    cartaVirada.classList.toggle("virar");
+    cartao.classList.toggle("virar");
     // mostrar o fundo da carta
     cartaVirada.classList.toggle("mostrar-fundo-carta");
 
-    const descricao = cartao.querySelector("descricao");
+    const descricao = cartao.querySelector(".descricao");
     descricao.classList.toggle("esconder");
-  })  
+  });
 });
 
 btnAvancar.addEventListener("click", function () {
