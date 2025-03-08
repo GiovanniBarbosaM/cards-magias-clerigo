@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone Yu-Gi-Oh!</title>
+
+    <link rel="stylesheet" href="src/css/fontes.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/estilos.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <h1 class="titulo">Cartas de Magias</h1>
+    </header>
+
+    <nav class="menu">
+      <div class="dropdown">
+        <a class="botao" href="index.html">Clérigo</a>
+        <ul class="lista-links">
+          <li><a class="linkMagia" href="magia_zero.html">Magias de Nível Zero</a></li>
+          <li><a class="linkMagia" href="magia_um.html">Magias de Nível Um</a></li>
+          <li><a class="linkMagia" href="magia_dois.html">Magias de Nível Dois</a></li>
+          <li><a class="linkMagia" href="magia_tres.html">Magias de Nível Três</a></li>
+          <li><a class="linkMagia" href="magia_quatro.html">Magias de Nível Quatro</a></li>
+          <li><a class="linkMagia" href="magia_cinco.html">Magias de Nível Cinco</a></li>
+          <li><a class="linkMagia" href="magia_seis.html">Magias de Nível Seis</a></li>
+          <li><a class="linkMagia" href="magia_sete.html">Magias de Nível Sete</a></li>
+          <li><a class="linkMagia" href="magia_oito.html">Magias de Nível Oito</a></li>
+          <li><a class="linkMagia" href="magia_nove.html">Magias de Nível Nove</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="slider">
+      <button class="btn-seta btn-voltar" id="btn-voltar">
+        <img src="src/imagens/seta.png" alt="seta voltar" />
+      </button>
+
+      <ul class="lista-personagens">
+        <li class="cartao fundo-2 selecionado">
+          <div class="carta-virada"></div>
+
+          <h2 class="nome">Cosertar</h2>
+
+          <div class="nivel-carta">
+          <p>-</p>
+          </div>
+
+          <img
+            src="src/imagens/consertar.jpeg"
+            alt="Consertar"
+            class="imagem-carta"
+          />
+
+          <div class="informacoes">
+            <p class="descricao">
+              Transmutação <br>
+              Componentes: V, G<br>
+              Tempo de Execução: 1 ação padrão<br>
+              Alcance: 3 metros<br>
+              Alvos: Um objeto de até 500 g<br>
+              Duração: Instantânea<br>
+              Teste de Resistência: Vontade anula (inofensiva,
+              objeto)<br>
+              Resistência à Magia: Sim (inofensiva, objeto)<br>
+              Consertar repara pequenas rachaduras ou rasgos
+              em objetos (mas não distorções, como as causadas
+              pela magia torcer madeira). A magia funde objetos
+              metálicos quebrados como anéis, um elo de corrente,
+              um medalhão ou o fio de uma adaga, considerando que
+              estejam parcialmente quebrados. Os objetos de madeira
+              e cerâmica com diversas rachaduras podem ser colados
+              como se fossem novos. Um buraco em uma bolsa ou
+              em um cantil de couro é completamente consertado.
+              A magia é capaz de reparar um item mágico, mas as
+              habilidades mágicas do item não serão restauradas.
+              Para restaurar as habilidades de um item mágico danificado,
+              consulte os talentos de criação de itens no
+              Capítulo 5: Talentos. A magia não consegue consertar
+              bastões, cajados e varinhas
+            </p>
+            <div class="informacoes-ataque">
+              <span>Faz pequenos reparos em um objeto.</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="cartao fundo-2">
+          <div class="carta-virada"></div>
+
+          <h2 class="nome">Criar Águas</h2>
+
+          <div class="nivel-carta">
+          <p>-</p>
+          </div>
+
+          <img
+            src="src/imagens/cria-agua.jpeg"
+            alt="Criar Água"
+            class="imagem-carta"
+          />
+
+          <div class="informacoes">
+            <p class="descricao">
+              Conjuração (Criação) [Água]<br>
+              Componentes: V, G<br>
+              Tempo de Execução: 1 ação padrão<br>
+              Alcance: Curto (7,5 m + 1,5 m/2 níveis)<br>
+              Efeito: Até 8 litros de água/nível<br>
+              Duração: Instantânea<br>
+              Teste de Resistência: Nenhum<br>
+              Resistência a Magia: Não<br>
+              Esta magia cria água pura e potável como a água de
+              chuva. A água pode ser criada em uma área tão pequena
+              quanto o necessário para o líquido ou em uma área
+              três vezes maior (criando goteiras e enchendo vários
+              recipientes pequenos).
+              Observação: As magias de conjuração não podem
+              criar substâncias ou objetos dentro de uma criatura.
+              Um m³ de água pesa cerca de 1 tonelada.
+            </p>
+            <div class="informacoes-ataque">
+              <span>Cria 8 litros/nível de água pura.</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="cartao fundo-2">
+            <div class="carta-virada"></div>
+            <h2 class="nome">Curar Ferimentos Mínimos</h2>
+            <div class="nivel-carta">
+              <p>-</p>
+            </div>
+            <img
+              src="src/imagens/curar-ferimento-minimos.jpeg"
+              alt="Curar Ferimentos Mínimos"
+              class="imagem-carta"
+            />
+            <div class="informacoes">
+              <p class="descricao">
+                Conjuração (Cura)<br>
+                Como curar ferimentos leves, mas curar ferimentos
+                mínimos só recupera 1 ponto de vida.
+                Curar Ferimentos Moderados
+              </p>
+              <div class="informacoes-ataque">
+                <span>Cura 1 ponto de dano.</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="cartao fundo-2">
+            <div class="carta-virada"></div>
+            <h2 class="nome">Detectar Magia</h2>
+            <div class="nivel-carta">
+              <p>-</p>
+            </div>
+            <img
+              src="src/imagens/detectar-magia.jpeg"
+              alt="Mechadragon X, o Destruidor Biomecânico"
+              class="imagem-carta"
+            />
+            <div class="informacoes">
+              <p class="descricao">
+                Universal<br>
+                Componentes: V, G<br>
+                Tempo de Execução: 1 ação padrão<br>
+                Alcance: 18 m<br>
+                Área: Emanação em cone<br>
+                Duração: Concentração, até 1 min./nível (D)<br>
+                Teste de Resistência: Nenhum<br>
+                Resistência à Magia: Não<br>
+                O personagem detecta auras mágicas. A quantidade
+                de informação obtida depende do tempo gasto para
+                analisar uma área ou objeto específico:
+                1ª rodada: Presença ou ausência de auras mágicas.
+                2ª rodada: Quantidade de auras mágicas diferentes
+                e a intensidade da aura mais poderosa.
+                3ª rodada: A intensidade e a localização de cada
+                aura. Se os itens ou criaturas estiverem na linha de visão
+                do conjurador, é possível realizar um teste de Identificar
+                Magia para determinar a escola de magia envolvida em
+                cada uma. Realize um teste por aura (CD 15 + nível da
+                magia ou 15 + metade do nível de conjurador para um
+                efeito que não seja uma magia).
+                As áreas mágicas, assim como diversos tipos de
+                magias ou fortes emanações mágicas, podem confundir
+                ou esconder as auras mais fracas.
+                Intensidade da Aura: O poder mágico e a intensidade
+                de uma aura dependem do nível de conjurador da
+                magia ou do item que está sendo analisado. Se uma aura
+                se enquadra em mais de uma categoria de intensidade,
+                a magia indica a mais forte.
+                Tempo de Existência da Aura: Quanto tempo uma
+                aura permanece ativa depende de sua intensidade original
+                (para as magias) ou de quando foi destruída (para
+                criaturas ou itens mágicos). Se esta magia for direcionada
+                sobre estes locais, ela indicará uma intensidade de
+                aura “fraca” (a mais suave); o quanto esta aura perdura
+                depende de sua intensidade original:
+                
+                
+                Intensidade Original Duração<br>
+                Fraca 1d6 rodadas<br>
+                Moderada 1d6 minutos<br>
+                Poderosa 1d6x10 minutos<br>
+                Avassalador 1d6 dias<br>
+              
+                As criaturas planares e elementais não são mágicos
+                e esta magia não permite que eles sejam detectados,
+                a menos que eles tenham sido invocados através de
+                magia.
+                A cada rodada, é possível analisar uma nova área.
+                A magia atravessa barreiras com até 30 cm de pedra,
+                2,5 cm de metal comum, uma folha fina de chumbo
+                ou 90 cm de madeira ou terra.
+                Detectar magia pode se tornar permanente através
+                da magia permanência.
+              </p>
+              <div class="informacoes-ataque">
+                <span>Detecta magias e itens mágicos a menos de 18 m.</span>
+                
+              </div>
+            </div>
+          </li>
+
+          <li class="cartao fundo-5">
+            <div class="carta-virada"></div>
+            <h2 class="nome">Archmage Stellarion, o Guardião das Estrelas</h2>
+            <div class="nivel-carta">
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+            </div>
+            <img
+              src="src/imagens/archmage.png"
+              alt="Archmage Stellarion, o Guardião das Estrelas"
+              class="imagem-carta"
+            />
+            <div class="informacoes">
+              <p class="descricao">
+                Um mago enigmático que manipula as forças do cosmos para proteger
+                o equilíbrio universal. Archmage Stellarion utiliza seu Cetro
+                Cósmico para canalizar feitiços de luz estelar, podendo banir
+                inimigos para dimensões distantes ou fortalecer aliados com
+                energia astral. Sua presença no campo de batalha é envolta em
+                mistério e poder, sendo reverenciado como o "Sábio do Infinito".
+              </p>
+              <div class="informacoes-ataque">
+                <span>ATK/ 2400</span>
+                <span>DEF/ 2600</span>
+              </div>
+            </div>
+          </li>
+          <li class="cartao fundo-6">
+            <div class="carta-virada"></div>
+            <h2 class="nome">Aegis Knight, o Guardião do Firmamento</h2>
+            <div class="nivel-carta">
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+            </div>
+            <img
+              src="src/imagens/aegis-knight.png"
+              alt="Aegis Knight, o Guardião do Firmamento"
+              class="imagem-carta"
+            />
+            <div class="informacoes">
+              <p class="descricao">
+                Vestindo uma armadura forjada com fragmentos de estrelas, Aegis
+                Knight é o defensor final das dimensões. Empunhando a Espada
+                Astral e o Escudo Celestial, ele possui o poder de anular ataques
+                inimigos e contra-atacar com golpes de pura energia cósmica. Seu
+                juramento é proteger o equilíbrio entre luz e trevas, sendo
+                lembrado como a "Fortaleza do Cosmos".
+              </p>
+              <div class="informacoes-ataque">
+                <span>ATK/ 3000</span>
+                <span>DEF/ 2800</span>
+              </div>
+            </div>
+          </li>
+          <li class="cartao fundo-7">
+            <div class="carta-virada"></div>
+            <h2 class="nome">Stormbringer Dragon, o Arauto das Tempestades</h2>
+            <div class="nivel-carta">
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+              <span class="estrela"></span>
+            </div>
+            <img
+              src="src/imagens/stormbringer.png"
+              alt="Stormbringer Dragon, o Arauto das Tempestades"
+              class="imagem-carta"
+            />
+            <div class="informacoes">
+              <p class="descricao">
+                Este poderoso dragão domina os céus, invocando trovões e
+                relâmpagos com o bater de suas asas. Stormbringer Dragon é a
+                personificação da fúria da natureza, destruindo tudo em seu
+                caminho com rajadas elétricas e ventos cortantes. Diz-se que sua
+                aparição é o prelúdio de uma tempestade sem fim, trazendo
+                destruição e renovação aos campos de batalha.
+              </p>
+              <div class="informacoes-ataque">
+                <span>ATK/ 2900</span>
+                <span>DEF/ 2100</span>
+              </div>
+            </div>
+          </li>
+      </ul>
+
+      <button class="btn-seta btn-avancar" id="btn-avancar">
+        <img src="src/imagens/seta.png" alt="seta avançar" />
+      </button>
+
+    </main>
+    <script src="src/js/index.js"></script>
+  </body>
+</html>

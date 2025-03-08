@@ -43,3 +43,18 @@ function esconderCartaoSelecionado() {
   const cartaoSelecionado = document.querySelector(".selecionado");
   cartaoSelecionado.classList.remove("selecionado");
 }
+
+function toggleMenu() {
+  var menu = document.getElementById("menuDropdown");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// Fechar o menu se clicar fora dele
+document.addEventListener("click", function(event) {
+  var menu = document.getElementById("menuDropdown");
+  var botao = document.querySelector(".botao");
+
+  if (!botao.contains(event.target) && !menu.contains(event.target)) {
+    menu.style.display = "none";
+  }
+});
