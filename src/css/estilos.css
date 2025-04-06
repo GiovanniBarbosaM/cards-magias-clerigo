@@ -1,3 +1,4 @@
+/* Estilos globais */
 body {
     font-family: "Yugioh", serif;
     background-image: url(../imagens/fundo2.png);
@@ -10,16 +11,25 @@ body {
     gap: 30px;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+/* Cabeçalho */
 .cabecalho {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    position: absolute; 
-    top: 15px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 100%; 
-    height: 60px; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 60px;
     font-size: 50px;
 }
 
@@ -28,69 +38,45 @@ body {
     text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
+/* Título e parágrafo da index */
 .h2index {
-    color:#430655;
+    color: #430655;
     font-size: 45px;
     display: flex;
     padding-top: 10px;
-    padding-right: 0px;
-    padding-left: 400px; 
+    padding-left: 400px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 150px;    
+    top: 150px;
     text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
 .pIndex {
     color: #ffffff;
     font-size: 25px;
-    padding: 10px 20px;
-    margin-left: 400px;
-    margin-right: 400px;
-    white-space: pre-line; /* Respeita quebras de linha no HTML */
+    padding: 10px 10px 30px 10px;
+    margin: 0 400px;
+    white-space: pre-line;
     line-height: 1;
 }
 
 
+/* Menu lateral */
 .menu {
     font-size: 30px;
-    display: flex;
-    background-color: #43065559;
-    padding-top:15px;
-    padding-right: 20px;
-    padding-left: 15px; 
+    display: inline-block;
+    background-color: #00000059;
+    padding: 15px 20px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 150px;
+    top: 230px;
     left: 20px;
-    width: 200px;
-    height: 350px;    
-    border: 2px solid #430655; 
+    width: 210px;
+    height: 350px;
+    border: 2px solid #000000;
     border-radius: 8px;
-    display: inline-block;
-}
-
-.listaclasse {
-    font-size: 30px;
-    
-}
-
-/* Estilizando o botão */
-.botao {
-    font-size: 25px;
-    padding-left: 10px;
-    background-color: #007bff00;
-    color: rgb(235, 227, 227);
-    border: none;
-    cursor: pointer;
-}
-
-/* Estilo do dropdown */
-.dropdown {
-    position: relative;
-    
 }
 
 .titulo-menu {
@@ -100,14 +86,44 @@ body {
     color: #fff;
     margin-bottom: 10px;
     text-align: center;
-  }
-  .dropdown a:last-child {
+}
+
+.listaclasse {
+    font-size: 30px;
+}
+
+.botao {
+    font-size: 25px;
+    padding-left: 10px;
+    background-color: transparent;
+    color: rgb(235, 227, 227);
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+.dropdown a:hover {
+    color: #00ff00;
+}
+
+.dropdown a:last-child {
     margin-top: 15px;
     font-weight: bold;
-    color: #ffeb3b; /* Exemplo de cor chamativa */
-  }
-    
-/* Lista oculta por padrão */
+    color: #ffffff;
+}
+
 .lista-links {
     display: none;
     position: absolute;
@@ -124,14 +140,13 @@ body {
     display: block;
 }
 
-/* Estiliza os itens da lista */
 .lista-links li {
     padding: 10px;
 }
 
 .lista-links li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     display: block;
 }
 
@@ -139,19 +154,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Estilizando o link "Clérigo" */
-.dropdown a {
-    color: white;
-    text-decoration: none; 
-    font-size: 18px; 
-    padding-top: 10px;
-    margin-left: 25px;
-}
-
-.dropdown a:hover {
-    color: #00ff00; 
-}
-
+/* Cartas estilo Yugioh */
 .cartao {
     opacity: 0;
     display: flex;
@@ -241,12 +244,16 @@ body {
     font-size: 13px;
 }
 
+/* Fundos especiais */
 .fundo-1 {
     background: url(../imagens/fundo-1.jpg) no-repeat;
 }
+
 .fundo-2 {
     background: url(../imagens/fundo-2.jpg) no-repeat;
 }
+
+/* Botão seta */
 .btn-seta {
     background-color: #ffffff;
     width: 70px;
@@ -269,6 +276,7 @@ body {
     background-color: #8351fe;
 }
 
+/* Scrollbar */
 body::-webkit-scrollbar-track {
     background-color: #c08057;
 }
@@ -286,6 +294,7 @@ body::-webkit-scrollbar-track {
     background: #c08057;
 }
 
+/* Efeitos de virada */
 .carta-virada {
     display: none;
 }
@@ -313,6 +322,68 @@ body::-webkit-scrollbar-track {
     display: none;
 }
 
+/* Ciclos */
+.container-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 200px 300px 0 300px;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.img-link, .linkCiclo {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.img-link:hover, .linkCiclo:hover {
+    text-decoration: none;
+    color: #15ff00;
+}
+
+figure {
+    margin: 0;
+}
+
+.imgCiclos {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.imgCiclos:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.linkCiclo:hover figcaption {
+    color: #15ff00;
+}
+
+.historiaClerigo {
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 10px 30px 10px;
+    margin: 0 40px;
+    white-space: pre-line;
+    line-height: 1;
+}
+
+/* Rodapé */
 .footer {
     position: fixed;
     bottom: 0;
@@ -320,9 +391,8 @@ body::-webkit-scrollbar-track {
     width: 100%;
     background-color: #8251fe00;
     color: #15ff00;
-    text-align: center; 
-    padding: 10px 0;  
-    font-size: 0.9rem;     
-    z-index: 999; 
-  }
-  
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    z-index: 999;
+}
