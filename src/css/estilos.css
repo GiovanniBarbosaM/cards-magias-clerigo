@@ -45,23 +45,19 @@ body {
 .pIndex {
     color: #ffffff;
     font-size: 25px;
-    display: flex;
-    padding-top: 10px;
-    padding-right: 0px;
-    padding-left: 400px; 
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 250px; 
-    margin-bottom: 2rem;
-  white-space: pre-line; /* Respeita quebras de linha no HTML */
+    padding: 10px 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+    white-space: pre-line; /* Respeita quebras de linha no HTML */
+    line-height: 1;
 }
+
 
 .menu {
     font-size: 30px;
     display: flex;
     background-color: #43065559;
-    padding-top: 10px;
+    padding-top:15px;
     padding-right: 20px;
     padding-left: 15px; 
     justify-content: center;
@@ -97,6 +93,20 @@ body {
     
 }
 
+.titulo-menu {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .dropdown a:last-child {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffeb3b; /* Exemplo de cor chamativa */
+  }
+    
 /* Lista oculta por padrão */
 .lista-links {
     display: none;

@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clone Yu-Gi-Oh!</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartas de Magias - Clone Yu-Gi-Oh!</title>
 
-    <link rel="stylesheet" href="src/css/fontes.css">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/estilos.css">
-    <link rel="stylesheet" href="src/css/responsivo.css">
-  </head>
+  <link rel="stylesheet" href="src/css/fontes.css" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/estilos.css" />
+  <link rel="stylesheet" href="src/css/responsivo.css" />
+</head>
 
-  <body>
+<body>
+  <header class="cabecalho">
+    <h1 class="titulo">Cartas de Magias</h1>
+  </header>
 
-    <header class="cabecalho">
-      <h1 class="titulo">Cartas de Magias</h1>
-    </header>
+  <!-- Menu lateral -->
+  <nav class="menu" role="navigation" aria-label="Menu de Classes">
+    <span class="titulo-menu">Menu: Classes</span>
 
-    <nav class="menu">
-      <a class="botao" href="index.html">Menu:</a>
+    <!-- Primeiros links principais -->
+    <div class="dropdown">
+      <a href="clerigo.html">Clérigo</a>
+      <a href="paladino.html">Paladino</a>
+      <a href="ranger.html">Ranger</a>
+      <a href="mago-feiticeiro.html">Mago/Feiticeiro</a>
+      <a href="index.html">← Voltar para o início</a>
+    </div>
 
-      <div class="dropdown">
+    <!-- Submenu de magias do Clérigo -->
+    <div class="dropdown">
+      <ul class="lista-links">
+        <li><a class="linkMagia" href="magia_zero.html">Nível 0</a></li>
+        <li><a class="linkMagia" href="magia_um.html">Nível 1</a></li>
+        <li><a class="linkMagia" href="magia_dois.html">Nível 2</a></li>
+        <li><a class="linkMagia" href="magia_tres.html">Nível 3</a></li>
+        <li><a class="linkMagia" href="magia_quatro.html">Nível 4</a></li>
+        <li><a class="linkMagia" href="magia_cinco.html">Nível 5</a></li>
+        <li><a class="linkMagia" href="magia_seis.html">Nível 6</a></li>
+        <li><a class="linkMagia" href="magia_sete.html">Nível 7</a></li>
+        <li><a class="linkMagia" href="magia_oito.html">Nível 8</a></li>
+        <li><a class="linkMagia" href="magia_nove.html">Nível 9</a></li>
+      </ul>
+    </div>
+  </nav>
 
-
-        <ul class="lista-links">
-          <li><a class="linkMagia" href="magia_zero.html">Magias de Nível Zero</a></li>
-          <li><a class="linkMagia" href="magia_um.html">Magias de Nível Um</a></li>
-          <li><a class="linkMagia" href="magia_dois.html">Magias de Nível Dois</a></li>
-          <li><a class="linkMagia" href="magia_tres.html">Magias de Nível Três</a></li>
-          <li><a class="linkMagia" href="magia_quatro.html">Magias de Nível Quatro</a></li>
-          <li><a class="linkMagia" href="magia_cinco.html">Magias de Nível Cinco</a></li>
-          <li><a class="linkMagia" href="magia_seis.html">Magias de Nível Seis</a></li>
-          <li><a class="linkMagia" href="magia_sete.html">Magias de Nível Sete</a></li>
-          <li><a class="linkMagia" href="magia_oito.html">Magias de Nível Oito</a></li>
-          <li><a class="linkMagia" href="magia_nove.html">Magias de Nível Nove</a></li>
-        </ul>
-      </div>
-    </nav>
-    <script src="src/js/index.js"></script>
-  </body>
+  <script src="src/js/index.js"></script>
+</body>
 </html>
