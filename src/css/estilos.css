@@ -389,13 +389,6 @@ figcaption {
         justify-content: center;
     }
 
-    .h2index {
-        font-size: 28px;
-        top: 120px;
-        text-align: center;
-        padding-left: 0;
-        transform: translateX(-50%);
-    }
 
     .pIndex {
         font-size: 18px;
