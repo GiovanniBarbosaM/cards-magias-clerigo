@@ -58,3 +58,16 @@ document.addEventListener("click", function(event) {
     menu.style.display = "none";
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 768) {
+    const cabecalho = document.querySelector('.cabecalho');
+    const menu = document.querySelector('#menuLateral');
+    const h2index = document.querySelector('.h2index');
+
+    if (cabecalho && menu && h2index) {
+      // Insere o menu entre o cabecalho e o h2index
+      h2index.parentNode.insertBefore(menu, h2index);
+    }
+  }
+});
