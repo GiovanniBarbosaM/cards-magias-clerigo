@@ -10,6 +10,23 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .cartao .imagem-carta {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .cartao .informacoes {
+        max-width: 250px;
+        font-size: 12px;
+    }
+
+    .menu {
+        position: static;
+        width: 90%;
+        margin: 20px auto 0;
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 496px) {
@@ -42,6 +59,16 @@
     #btn-voltar {
         left: 20%;
     }
+
+    .cartao .descricao {
+        max-height: 80px;
+        font-size: 12px;
+    }
+
+    .cartao .nome {
+        font-size: 11px;
+        padding: 4px;
+    }
 }
 
 @media(max-width: 375px) {
@@ -62,5 +89,15 @@
     .btn-seta {
         font-size: 12px;
         padding: 6px 12px;
+    }
+
+    .h2index {
+        font-size: 20px;
+        top: 100px;
+    }
+
+    .pIndex {
+        font-size: 16px;
+        margin: 0 10px;
     }
 }
