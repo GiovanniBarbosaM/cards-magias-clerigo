@@ -19,7 +19,7 @@
   </header>
 
   <!-- Menu de Navegação -->
-  <nav class="menu" role="navigation" aria-label="Menu de Classes">
+  <nav class="menu" id="menuLateral" role="navigation" aria-label="Menu de Classes">
     <span class="titulo-menu">Menu: Classes</span>
     <div class="dropdown">
       <a href="clerigo.html">Clérigo</a>
@@ -29,49 +29,35 @@
       <a href="index.html">← Início</a>
     </div>
   </nav>
-</body>
-</html>
-
 
   <!-- Conteúdo principal -->
   <main role="main">
     <section>
       <h2 class="h2index">Bem-vindo ao projeto sobre Dungeons & Dragons 3.5</h2>
 
-      <p class="pIndex">         
-        
-       
-       
-        
-       
-    
-    
-
-
-        🐉 Bem-vindo ao Mundo de Dungeons & Dragons! 🎲✨
+      <p class="pIndex">
+        🐉 Bem-vindo ao Mundo de Dungeons & Dragons! 🎲✨  
         Prepare-se para embarcar em uma jornada repleta de magia, monstros e grandes aventuras!
-        
+
         Dungeons & Dragons (ou simplesmente D&D) é mais do que um jogo — é uma experiência onde a imaginação é o seu maior poder. Criado em 1974 por Gary Gygax e Dave Arneson, D&D foi o primeiro jogo de RPG (Role-Playing Game) do mundo, e desde então inspirou gerações de jogadores, livros, filmes, séries e até videogames.
-        
-        🔍 O que é D&D?
+
+        🔍 O que é D&D?  
         Dungeons & Dragons é um jogo de interpretação de personagens, onde você e seus amigos assumem o papel de heróis em um mundo de fantasia medieval. Você pode ser um guerreiro corajoso, uma maga sábia, um ladino ágil ou até um clérigo sagrado. Juntos, vocês exploram masmorras, enfrentam dragões, descobrem tesouros e decidem o destino de reinos inteiros.
-        
+
         Tudo acontece através da narração de histórias e de regras que usam dados, especialmente o famoso dado de 20 lados (d20), para definir o sucesso ou fracasso das ações.
-        
-        🧠 Quem criou?
+
+        🧠 Quem criou?  
         Gary Gygax: considerado o "pai do RPG", visionário por transformar batalhas de miniaturas em narrativas envolventes.
-        
+
         Dave Arneson: criador da campanha “Blackmoor”, que trouxe a ideia de mundos vivos e evolutivos. Juntos, eles criaram um jogo onde a criatividade e o trabalho em equipe são mais importantes do que ganhar ou perder.
-        
-        🌍 Por que jogar?
-        Estimula a imaginação, a lógica e a resolução de problemas.
-        
-        Fortalece o trabalho em grupo e a capacidade de tomar decisões.
-        
+
+        🌍 Por que jogar?  
+        Estimula a imaginação, a lógica e a resolução de problemas.  
+        Fortalece o trabalho em grupo e a capacidade de tomar decisões.  
         É uma forma divertida e envolvente de contar histórias e viver aventuras únicas.
-        
+
         Seja você um iniciante curioso ou um aventureiro experiente, este site foi feito para guiar sua jornada pelo universo de D&D. Aqui você encontrará explicações simples, guias para iniciantes, personagens épicos, e tudo o que precisa para criar sua própria lenda.
-        
+
         👉 Prepare seus dados. Escolha seu personagem. E entre no jogo. A aventura começa agora!
       </p>
     </section>
@@ -82,7 +68,23 @@
     <p> 2025 Giovanni - Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Script -->
+  <!-- Script principal -->
   <script src="src/js/index.js"></script>
+
+  <!-- Script para mover o menu no mobile -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth <= 768) {
+        const cabecalho = document.querySelector('.cabecalho');
+        const menu = document.querySelector('#menuLateral');
+        const h2index = document.querySelector('.h2index');
+
+        if (cabecalho && menu && h2index) {
+          // Mover o menu para antes do h2
+          h2index.parentNode.insertBefore(menu, h2index);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
