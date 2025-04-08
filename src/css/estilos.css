@@ -46,21 +46,7 @@ a:hover {
     text-shadow: 2px 2px 4px #ffffff;
 }
 
-/* Título e parágrafo da index */
-.h2index {
-    color: #430655;
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-shadow: 2px 2px 4px #ffffff;
-    text-align: center;
-}
-
+/* Parágrafo da index */
 .pIndex {
     color: #ffffff;
     font-size: 25px;
@@ -320,20 +306,22 @@ body::-webkit-scrollbar-thumb:hover {
     margin-top: 30px;
 }
 
-.img-link, .linkCiclo {
+.img-link,
+.linkCiclo {
     text-align: center;
     color: white;
     font-family: 'Arial', sans-serif;
 }
 
-.img-link:hover, .linkCiclo:hover {
+.img-link:hover,
+.linkCiclo:hover {
     color: #15ff00;
 }
 
 .imgCiclos {
     width: 250px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -388,7 +376,6 @@ figcaption {
         align-items: center;
         justify-content: center;
     }
-
 
     .pIndex {
         font-size: 18px;
