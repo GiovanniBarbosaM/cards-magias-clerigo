@@ -31,7 +31,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 55px;
+    padding: auto;
+    top: 75px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
