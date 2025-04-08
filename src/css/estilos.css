@@ -374,6 +374,15 @@ figcaption {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .cabecalho {
+        position: static;
+        flex-direction: column;
+        font-size: 30px;
+        transform: none;
+        align-items: center;
+        justify-content: center;
+    }
+
     .h2index {
         font-size: 28px;
         top: 120px;
@@ -388,14 +397,11 @@ figcaption {
     }
 
     .menu {
-        font-size: 18px;
+        position: static;
         width: 90%;
-        left: 5%;
-        top: 200px;
-    }
-
-    .cabecalho {
-        font-size: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 18px;
     }
 
     .container-img {
