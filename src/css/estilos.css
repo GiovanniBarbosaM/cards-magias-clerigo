@@ -9,6 +9,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -58,7 +60,7 @@ a:hover {
     padding: 10px 10px 30px 10px;
     margin: 0 400px;
     white-space: pre-line;
-    line-height: 1;
+    line-height: 1.4;
 }
 
 
@@ -66,7 +68,7 @@ a:hover {
 .menu {
     font-size: 30px;
     display: inline-block;
-    background-color: #00000059;
+    background-color: #000000aa;
     padding: 15px 20px;
     justify-content: center;
     align-items: center;
@@ -129,7 +131,7 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.6);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -151,7 +153,7 @@ a:hover {
 }
 
 .lista-links li:hover {
-    background-color: #f0f0f0;
+    background-color: #2f2f2f;
 }
 
 /* Cartas estilo Yugioh */
@@ -291,7 +293,7 @@ body::-webkit-scrollbar-track {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #c08057;
+    background: #a8643d;
 }
 
 /* Efeitos de virada */
@@ -380,7 +382,7 @@ figcaption {
     padding: 10px 10px 30px 10px;
     margin: 0 40px;
     white-space: pre-line;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 /* Rodapé */
@@ -389,10 +391,40 @@ figcaption {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #8251fe00;
+    background-color: #00000099;
     color: #15ff00;
     text-align: center;
     padding: 10px 0;
     font-size: 0.9rem;
     z-index: 999;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .h2index {
+        font-size: 28px;
+        padding-left: 20px;
+        top: 120px;
+        text-align: center;
+    }
+
+    .pIndex {
+        font-size: 18px;
+        margin: 0 20px;
+    }
+
+    .menu {
+        font-size: 20px;
+        width: 180px;
+        height: auto;
+        top: 200px;
+    }
+
+    .cabecalho {
+        font-size: 30px;
+    }
+
+    .container-img {
+        padding: 100px 20px 0 20px;
+    }
 }
