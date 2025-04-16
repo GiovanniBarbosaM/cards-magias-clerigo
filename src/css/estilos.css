@@ -1,19 +1,21 @@
-/* Estilos globais */
 body {
     font-family: "Yugioh", serif;
     background-image: url(../imagens/fundo2.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz com que a imagem não se mova ao rolar */
     display: flex;
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    gap: 30px;
+    gap: 3vh;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 
 a {
     text-decoration: none;
@@ -32,27 +34,27 @@ a:hover {
     align-items: center;
     position: absolute;
     padding: auto;
-    top: 75px;
+    top: 7.5vh;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 60px;
-    font-size: 50px;
+    height: 8vh;
+    font-size: 3vw;
     z-index: 10;
     text-align: center;
 }
 
 .cabecalho .titulo {
     color: #430655;
-    text-shadow: 2px 2px 4px #ffffff;
+    text-shadow: 0.2vw 0.2vw 0.4vw #ffffff;
 }
 
 /* Parágrafo da index */
 .pIndex {
     color: #ffffff;
-    font-size: 25px;
-    padding: 10% 3% 10% 3%;
-    margin: 0 10%;
+    font-size: 1.5vw;
+    padding: 10% 3%;
+    margin: 0 20%;
     white-space: pre-line;
     line-height: 1.6;
     text-align: center;
@@ -60,35 +62,36 @@ a:hover {
 
 /* Menu lateral */
 .menu {
-    font-size: 24px;
+    font-size: 1.6vw;
     background-color: #00000065;
-    padding: 15px 20px;
+    padding: 1.5% 2%;
     position: absolute;
-    top: 230px;
-    left: 20px;
-    width: 220px;
-    border: 2px solid #ffffff34;
-    border-radius: 8px;
+    top: 30vh;
+    left: 2%;
+    width: 15%;
+    border: 0.2vw solid #ffffff34;
+    border-radius: 0.6vw;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1vw;
 }
 
 .titulo-menu {
-    font-size: 22px;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #fff;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
 }
 
+
 .botao {
-    font-size: 22px;
+    font-size: 1.4vw;
     background-color: transparent;
     color: #ebe3e3;
     border: none;
     cursor: pointer;
-    padding-left: 10px;
+    padding-left: 1vw;
     text-align: left;
     transition: color 0.3s ease;
 }
@@ -104,8 +107,8 @@ a:hover {
 
 .dropdown a {
     color: white;
-    font-size: 18px;
-    margin-left: 25px;
+    font-size: 1.2vw;
+    margin-left: 2%;
     display: block;
     transition: color 0.3s ease;
 }
@@ -115,7 +118,7 @@ a:hover {
 }
 
 .dropdown a:last-child {
-    margin-top: 15px;
+    margin-top: 1.5vh;
     font-weight: bold;
     color: #ffffff;
 }
@@ -127,8 +130,8 @@ a:hover {
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
     list-style: none;
-    width: 180px;
-    border-radius: 5px;
+    width: 12vw;
+    border-radius: 0.4vw;
     z-index: 10;
 }
 
@@ -137,7 +140,7 @@ a:hover {
 }
 
 .lista-links li {
-    padding: 10px;
+    padding: 1vw;
 }
 
 .lista-links li:hover {
@@ -153,8 +156,8 @@ a:hover {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    padding: 12px;
-    gap: 5px;
+    padding: 1.2vw;
+    gap: 0.5vw;
     position: absolute;
     transition: opacity 0.4s ease;
 }
@@ -168,23 +171,23 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 130px;
+    gap: 9vw;
     flex-wrap: wrap;
-    padding: 0 20px;
+    padding: 0 2%;
 }
 
 .cartao .nome {
-    font-size: 13px;
-    padding: 5px;
+    font-size: 1vw;
+    padding: 0.5vw;
     text-transform: uppercase;
     background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
-    border: 2px solid #a67c52;
-    border-radius: 4px;
+    border: 0.2vw solid #a67c52;
+    border-radius: 0.4vw;
 }
 
 .cartao .estrela {
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 2vw;
     background: url(../imagens/nivel-carta.png) no-repeat center;
     background-size: contain;
 }
@@ -192,32 +195,32 @@ a:hover {
 .cartao .nivel-carta {
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
-    gap: 5px;
+    margin-right: 1vw;
+    gap: 0.5vw;
 }
 
 .cartao .imagem-carta {
-    max-width: 260px;
+    max-width: 18vw;
     align-self: center;
 }
 
 .cartao .informacoes {
-    border-radius: 5px;
-    max-width: 300px;
+    border-radius: 0.5vw;
+    max-width: 22vw;
     color: #000000;
     background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
-    border: 2px solid #a67c52;
+    border: 0.2vw solid #a67c52;
     text-align: left;
     line-height: 1.5;
-    padding: 5px;
+    padding: 0.5vw;
 }
 
 .cartao .descricao {
-    border-bottom: 1px solid #000000;
-    padding: 10px;
-    max-height: 95px;
+    border-bottom: 0.1vw solid #000000;
+    padding: 1vw;
+    max-height: 12vh;
     overflow-y: auto;
-    font-size: 13px;
+    font-size: 1vw;
 }
 
 /* Fundos */
@@ -232,8 +235,8 @@ a:hover {
 /* Botão seta */
 .btn-seta {
     background-color: #ffffff;
-    width: 70px;
-    height: 70px;
+    width: 5vw;
+    height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,7 +244,7 @@ a:hover {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 7px 29px rgba(100, 100, 111, 0.2);
+    box-shadow: 0 0.7vw 2.9vw rgba(100, 100, 111, 0.2);
 }
 
 .btn-seta:hover {
@@ -254,7 +257,7 @@ a:hover {
 
 /* Scrollbar */
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 0.7vw;
 }
 
 body::-webkit-scrollbar-track {
@@ -263,7 +266,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background: #c08057;
-    border-radius: 10px;
+    border-radius: 1vw;
     transition: background 0.3s ease;
 }
 
@@ -284,7 +287,7 @@ body::-webkit-scrollbar-thumb:hover {
     top: 0;
     left: 0;
     background: url(../imagens/fundo-carta.jpg) center/cover no-repeat;
-    border-radius: 10px;
+    border-radius: 1vw;
     z-index: 2;
 }
 
@@ -302,9 +305,9 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 200px 300px 0;
-    gap: 30px;
-    margin-top: 30px;
+    padding: 20vh 20vw 0;
+    gap: 3vw;
+    margin-top: 3vh;
 }
 
 .img-link,
@@ -320,9 +323,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .imgCiclos {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 18vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -333,8 +336,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 figcaption {
     color: white;
-    margin-top: 10px;
-    font-size: 22px;
+    margin-top: 1vh;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     transition: color 0.3s ease;
@@ -346,9 +349,9 @@ figcaption {
 
 .historiaClerigo {
     color: white;
-    font-size: 25px;
-    padding: 10px 10px 30px;
-    margin: 0 40px;
+    font-size: 2vw;
+    padding: 1vw 1vw 3vw;
+    margin: 0 3vw;
     white-space: pre-line;
     line-height: 1.5;
 }
@@ -362,7 +365,7 @@ figcaption {
     background-color: #00000099;
     color: #15ff00;
     text-align: center;
-    padding: 10px 0;
+    padding: 1vh 0;
     font-size: 0.9rem;
     z-index: 999;
 }
@@ -372,30 +375,30 @@ figcaption {
     .cabecalho {
         position: static;
         flex-direction: column;
-        font-size: 30px;
+        font-size: 5vw;
         transform: none;
         align-items: center;
         justify-content: center;
     }
 
     .pIndex {
-        font-size: 18px;
-        margin: 0 20px;
+        font-size: 3.5vw;
+        margin: 0 5%;
     }
 
     .menu {
         position: static;
         width: 90%;
-        margin: 20px auto;
-        font-size: 18px;
+        margin: 5% auto;
+        font-size: 3.5vw;
     }
 
     .container-img {
-        padding: 100px 20px 0;
+        padding: 15vh 5vw 0;
     }
 
     .imgCiclos {
         width: 100%;
-        max-width: 300px;
+        max-width: 80vw;
     }
 }
