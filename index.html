@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="src/css/responsivo.css">
 </head>
 
-<body>
+<body class="pesquisavel">
   <!-- Cabeçalho -->
   <header class="cabecalho" role="banner">
     <h1 class="titulo">Dungeons and Dragons</h1>
@@ -23,23 +23,27 @@
     <span class="titulo-menu">Menu: </span>
     <div class="dropdown">
 
-      <span class="titulo-menu">Classes:</span>
+      <span class="lista">Classes:</span>
       <a href="clerigo.html">Clérigo</a>
       <a href="paladino.html">Paladino</a>
       <a href="ranger.html">Ranger</a>
       <a href="mago-feiticeiro.html">Mago/Feiticeiro</a>
 
-      <span class="titulo-menu">Ajuda:</span>
-      <a href="#">Guias</a>
+      <span class="lista">Ajuda:</span>
+      <a href="guias.html">Guias</a>
       <a href="#">Personagens</a>
       <a href="#">Dicas de jogo</a>
      <a href="#">Ferramentas para criars</a>
 
-      <a href="index.html">← Início</a>
+      <a class="voltarInicio" href="index.html">← Início</a>
       
     </div>
   </nav>
 
+  <div class="barra-pesquisa">
+    <input type="text" id="pesquisa" placeholder="Pesquisar no site..." onkeyup="filtroGeral()" />
+  </div>
+  
   <!-- Conteúdo principal -->
   <main role="main">
     <section>
@@ -81,7 +85,7 @@ Juntos, eles deram origem ao primeiro RPG do mundo, em 1974, abrindo as portas p
 Seja você um aventureiro novato ou um veterano dos reinos esquecidos, este espaço foi criado para guiar sua jornada e expandir sua lenda.
 
 Aqui você encontrará:
-📘 <a href="#">Guias para iniciantes</a>
+📘 <a href="guias.html">Guias para iniciantes</a>
 🧙‍♂️ <a href="#">Personagens épicos</a>
 🛡️ <a href="#">Dicas de jogo e estratégias</a>
 🗺️ <a href="#">Ferramentas para criar seus próprios mundos</a>
@@ -96,7 +100,7 @@ Você responde?
 
   <!-- Rodapé -->
   <footer class="footer" role="contentinfo">
-    <p> 2025 Giovanni - Todos os direitos reservados.</p>
+    <p> 2025 Giovanni Barbosa</p>
   </footer>
 
   <!-- Script principal -->

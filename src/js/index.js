@@ -71,3 +71,17 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+function filtroGeral() {
+  const termo = document.getElementById("pesquisa").value.toLowerCase();
+  const elementos = document.querySelectorAll(".pesquisavel");
+
+  elementos.forEach(el => {
+      const texto = el.textContent.toLowerCase();
+      if (texto.includes(termo)) {
+          el.style.display = "block"; // ou "flex", dependendo do seu layout
+      } else {
+          el.style.display = "none";
+      }
+  });
+}
