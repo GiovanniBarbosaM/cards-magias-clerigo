@@ -17,23 +17,23 @@ cartoes.forEach(cartao => {
   });
 });
 
-btnAvancar.addEventListener("click", function () {
-  if (cartaoAtual === cartoes.length - 1) return;
+if (btnAvancar && btnVoltar) {
+  btnAvancar.addEventListener("click", function () {
+    if (cartaoAtual === cartoes.length - 1) return;
 
-  esconderCartaoSelecionado();
+    esconderCartaoSelecionado();
+    cartaoAtual++;
+    mostrarCartao(cartaoAtual);
+  });
 
-  cartaoAtual++;
-  mostrarCartao(cartaoAtual);
-});
+  btnVoltar.addEventListener("click", function () {
+    if (cartaoAtual === 0) return;
 
-btnVoltar.addEventListener("click", function () {
-  if (cartaoAtual === 0) return;
-
-  esconderCartaoSelecionado();
-
-  cartaoAtual--;
-  mostrarCartao(cartaoAtual);
-});
+    esconderCartaoSelecionado();
+    cartaoAtual--;
+    mostrarCartao(cartaoAtual);
+  });
+}
 
 function mostrarCartao(cartaoAtual) {
   cartoes[cartaoAtual].classList.add("selecionado");
@@ -41,7 +41,9 @@ function mostrarCartao(cartaoAtual) {
 
 function esconderCartaoSelecionado() {
   const cartaoSelecionado = document.querySelector(".selecionado");
-  cartaoSelecionado.classList.remove("selecionado");
+  if (cartaoSelecionado) {
+    cartaoSelecionado.classList.remove("selecionado");
+  }
 }
 
 function toggleMenu() {
@@ -65,23 +67,36 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('#menuLateral');
     const h2index = document.querySelector('.h2index');
 
+    if (!cabecalho) {
+      console.warn('Elemento .cabecalho não encontrado');
+    }
+
+    if (!menu) {
+      console.warn('Elemento #menuLateral não encontrado');
+    }
+
+    if (!h2index) {
+      console.warn('Elemento .h2index não encontrado');
+    }
+
     if (cabecalho && menu && h2index) {
-      // Insere o menu entre o cabecalho e o h2index
       h2index.parentNode.insertBefore(menu, h2index);
     }
   }
 });
+
 
 function filtroGeral() {
   const termo = document.getElementById("pesquisa").value.toLowerCase();
   const elementos = document.querySelectorAll(".pesquisavel");
 
   elementos.forEach(el => {
-      const texto = el.textContent.toLowerCase();
-      if (texto.includes(termo)) {
-          el.style.display = "block"; // ou "flex", dependendo do seu layout
-      } else {
-          el.style.display = "none";
-      }
+    const texto = el.textContent.toLowerCase();
+    if (texto.includes(termo)) {
+      el.style.display = "block"; // ou "flex", dependendo do seu layout
+    } else {
+      el.style.display = "none";
+    }
   });
 }
+

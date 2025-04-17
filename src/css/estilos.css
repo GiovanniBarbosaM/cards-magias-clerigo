@@ -25,7 +25,7 @@ a:hover {
 }
 
 /* Cabeçalho */
-.cabecalho {
+.cabecalho {   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,19 +58,36 @@ a:hover {
 
 /* Menu lateral */
 .menu {
+    background: #0000006b;
     font-size: 1.6vw;
-    background-color: #00000065;
-    padding: 1.5% 2%;
     position: absolute;
     top: 30vh;
     left: 2%;
     width: 15%;
+    padding: 1.5% 2%;
     border: 0.2vw solid #ffffff34;
     border-radius: 0.6vw;
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    z-index: 1;
+    color: white;
+    overflow: hidden;
 }
+
+/*
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../imagens/d20-fundo.jpeg) center/cover no-repeat;
+    opacity: 0.6; 
+    z-index: -1;
+}*/
+
 
 .titulo-menu,
 .lista,
@@ -150,6 +167,8 @@ a:hover {
     background-color: #2f2f2f;
 }
 
+
+/* Cartões */
 .cartao {
     opacity: 0;
     display: flex;
@@ -157,12 +176,54 @@ a:hover {
     padding: 1.2vw;
     gap: 0.5vw;
     position: absolute;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    transform: scale(0.98);
+    border-radius: 0.5vw;
+}
+
+.cartao:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 0.5vw #15ff00;
 }
 
 .cartao.selecionado {
     opacity: 1;
     z-index: 1;
+    animation: fadeIn 0.6s ease-in-out;
+}
+.lista-personagens {
+	width: 15vw;
+	height: 27vw;
+	border-radius: 1vw;
+	position: relative;
+	padding: 0.8vw;
+}
+
+/* Em telas pequenas, use tamanhos fixos ou menores */
+@media (max-width: 768px) {
+	.lista-personagens {
+		width: 80vw;
+		height: auto;
+		padding: 4vw;
+		border-radius: 3vw;
+	}
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cartao.virar {
+    transform: rotateZ(90deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 .slider {
@@ -287,11 +348,6 @@ body::-webkit-scrollbar-thumb:hover {
     background: url(../imagens/fundo-carta.jpg) center/cover no-repeat;
     border-radius: 1vw;
     z-index: 2;
-}
-
-.cartao.virar {
-    transform: rotateZ(90deg);
-    transition: transform 0.3s ease-in-out;
 }
 
 .esconder {
@@ -423,4 +479,8 @@ figcaption {
 
 #pesquisa::placeholder {
     color: #15ff00aa;
+}
+
+h3{
+    color: #15ff00;
 }
