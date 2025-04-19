@@ -100,3 +100,15 @@ function filtroGeral() {
   });
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 768) {
+    const cabecalho = document.querySelector('.cabecalho');
+    const menu = document.querySelector('#menuLateral');
+    const h2index = document.querySelector('.h2index');
+
+    if (cabecalho && menu && h2index) {
+      // Mover o menu para antes do h2
+      h2index.parentNode.insertBefore(menu, h2index);
+    }
+  }
+});

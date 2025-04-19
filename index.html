@@ -18,6 +18,8 @@
     <h1 class="titulo">Dungeons and Dragons</h1>
   </header>
 
+  
+
   <!-- Menu de Navegação -->
   <nav class="menu" id="menuLateral" role="navigation" aria-label="Menu de Classes">
     <span class="titulo-menu">Menu: </span>
@@ -43,8 +45,6 @@
   <div class="barra-pesquisa">
     <input type="text" id="pesquisa" placeholder="Pesquisar no site..." onkeyup="filtroGeral()" />
   </div>
-
-  
   
   <!-- Conteúdo principal -->
   <main role="main">
@@ -108,20 +108,5 @@ Você responde?
   <!-- Script principal -->
   <script src="src/js/index.js"></script>
 
-  <!-- Script para mover o menu no mobile -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.innerWidth <= 768) {
-        const cabecalho = document.querySelector('.cabecalho');
-        const menu = document.querySelector('#menuLateral');
-        const h2index = document.querySelector('.h2index');
-
-        if (cabecalho && menu && h2index) {
-          // Mover o menu para antes do h2
-          h2index.parentNode.insertBefore(menu, h2index);
-        }
-      }
-    });
-  </script>
 </body>
 </html>
