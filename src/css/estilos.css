@@ -52,6 +52,17 @@ a:hover {
     text-shadow: 0.2vw 0.2vw 0.4vw #15ff00;
 }
 
+.magia {
+    border-left: 2px solid #f8f8f2;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    animation: piscarCursor 0.7s steps(2) infinite;
+  }
+
+  
+
 /* ========================== */
 /* Parágrafo principal       */
 /* ========================== */
@@ -463,3 +474,54 @@ figcaption {
         font-size: 5vw;
     }
 }
+
+
+h4 {
+    text-align: center;
+    font-size: 2.5rem;
+    color:#430655;
+    text-shadow: 0.2vw 0.2vw 0.4vw #15ff00;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000;
+  }
+  
+  input,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  input:focus {
+    border-color: #430655;
+    outline: none;
+  }
+  
+  button {
+    background-color:#430655;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    color: #000000;
+    background-color: #15ff00;
+  }

@@ -39,7 +39,7 @@
 
       <span class="lista">Ajuda:</span>
       <a href="guias.html">Guias</a>
-      <a href="#">Personagens</a>
+      <a href="personagens.html">Personagens</a>
       <a href="#">Dicas de jogo</a>
      <a href="#">Ferramentas para criars</a>
 
@@ -49,7 +49,8 @@
   </nav>
 
   <div class="barra-pesquisa">
-    <input type="text" id="pesquisa" placeholder="Pesquisar no site..." onkeyup="filtroGeral()" />
+    <input type="text" id="busca" placeholder="Buscar por nome ou classe..." oninput="buscarFichas()">
+
   </div>
   
   <!-- Conteúdo principal -->
@@ -106,6 +107,8 @@ Você responde?
     </section>
   </main>
 
+  
+
   <!-- Rodapé -->
   <footer class="footer" role="contentinfo">
     <p> 2025 Giovanni Barbosa</p>
@@ -113,6 +116,7 @@ Você responde?
 
   <!-- Script principal -->
   <script src="src/js/index.js"></script>
-
+  <script src="src/js/server.js"></script>
+  <script src="src/js/script.js"></script>
 </body>
 </html>
