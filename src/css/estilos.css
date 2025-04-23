@@ -476,15 +476,25 @@ figcaption {
 }
 
 
-h4 {
+.salvar-fichas {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color:#430655;
     text-shadow: 0.2vw 0.2vw 0.4vw #15ff00;
-    margin-bottom: 30px;
+    margin-bottom: 0.6vw;
+    padding-top: 15vw;
   }
-  
-  form {
+
+.fichas-personagens{
+    text-align: center;
+    font-size: 3rem;
+    color:#430655;
+    text-shadow: 0.2vw 0.2vw 0.4vw #15ff00;
+    margin-bottom: 0.1vw;
+    padding-top: 1vw;
+}
+
+form {
     max-width: 400px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.6);

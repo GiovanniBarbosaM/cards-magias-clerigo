@@ -1,15 +1,3 @@
 [
-    {
-      "id": "1",
-      "nome": "Personagem 1",
-      "classe": "Guerreiro",
-      "nivel": 5
-    },
-    {
-      "id": "2",
-      "nome": "Personagem 2",
-      "classe": "Mago",
-      "nivel": 3
-    }
   ]
   
