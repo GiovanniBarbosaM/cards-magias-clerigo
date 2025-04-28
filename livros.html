@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CardMagicD&D</title>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="src/css/fontes.css" />
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/estilos.css" />
-    <link rel="stylesheet" href="src/css/responsivo.css" />
+     <!-- Estilos -->
+   <link rel="stylesheet" href="src/style/fontes.css">
+   <link rel="stylesheet" href="src/style/reset.css">
+   <link rel="stylesheet" href="src/style/estilos.css">
+   <link rel="stylesheet" href="src/style/responsivo.css">
   </head>
 
   <body>
@@ -47,28 +47,15 @@
 
     
 
-    <!-- Rodapé -->
-    <footer class="footer" role="contentinfo">
-      <p>2025 Giovanni Barbosa</p>
-    </footer>
+     <!-- Rodapé -->
+  <footer class="footer" role="contentinfo">
+    <p> 2025 Giovanni Barbosa</p>
+  </footer>
 
-    <!-- Script principal -->
-    <script src="src/js/index.js"></script>
-
-    <!-- Script para mover o menu no mobile -->
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        if (window.innerWidth <= 768) {
-          const cabecalho = document.querySelector(".cabecalho");
-          const menu = document.querySelector("#menuLateral");
-          const h2index = document.querySelector(".h2index");
-
-          if (cabecalho && menu && h2index) {
-            // Mover o menu para antes do h2
-            h2index.parentNode.insertBefore(menu, h2index);
-          }
-        }
-      });
-    </script>
-  </body>
+  <!-- Script principal -->
+  <script src="js/index.js"></script>
+  <script src="js/server.js"></script>
+  <script src="js/script.js" defer></script>
+ 
+</body>
 </html>

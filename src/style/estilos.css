@@ -125,6 +125,38 @@ a:hover {
     cursor: pointer;
 }
 
+.barra-pesquisa {
+    height: 2.5vw;
+    width: 15vw; /* Largura ajustável */
+    background-color: black; /* Fundo preto */
+    border: 2px solid purple; /* Borda roxa */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    color: #32CD32; /* Letras verde-limão */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    display: flex; /* Para alinhar a lupa dentro do input */
+    align-items: center; /* Alinha a lupa verticalmente */
+}
+
+.barra-pesquisa input {
+    background: transparent; /* Fundo transparente dentro do input */
+    border: none; /* Remove a borda do input */
+    color: inherit; /* Mantém a cor do texto verde-limão */
+    font-size: inherit; /* Mantém o tamanho da fonte */
+    width: 100%; 
+    padding-left: 30px; 
+}
+
+.barra-pesquisa::before {
+    content: "🔍"; /* Emoji de lupa como conteúdo */
+    position: absolute; /* Posiciona a lupa */
+    left: 10px; /* Distância da esquerda */
+    font-size: 20px; /* Tamanho da lupa */
+}
+
 /* ========================== */
 /* Botão                     */
 /* ========================== */
@@ -494,6 +526,14 @@ figcaption {
     padding-top: 1vw;
 }
 
+.ficha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+  }
+  
+
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -535,3 +575,11 @@ form {
     color: #000000;
     background-color: #15ff00;
   }
+
+  @media (max-width: 768px) {
+    .cabecalho {
+        position: static;
+        flex-direction: column;
+        font-size: 5vw;
+    }
+}

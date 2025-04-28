@@ -3,40 +3,39 @@ const btnVoltar = document.getElementById("btn-voltar");
 const cartoes = document.querySelectorAll(".cartao");
 let cartaoAtual = 0;
 
+// Função para virar o cartão
 cartoes.forEach(cartao => {
   cartao.addEventListener("click", function() {
     const cartaVirada = cartao.querySelector(".carta-virada");
-
-    // virar o cartão
-    cartao.classList.toggle("virar");
-    // mostrar o fundo da carta
-    cartaVirada.classList.toggle("mostrar-fundo-carta");
-
     const descricao = cartao.querySelector(".descricao");
+
+    cartao.classList.toggle("virar");
+    cartaVirada.classList.toggle("mostrar-fundo-carta");
     descricao.classList.toggle("esconder");
   });
 });
 
+// Navegação entre cartões
 if (btnAvancar && btnVoltar) {
-  btnAvancar.addEventListener("click", function () {
-    if (cartaoAtual === cartoes.length - 1) return;
-
-    esconderCartaoSelecionado();
-    cartaoAtual++;
-    mostrarCartao(cartaoAtual);
+  btnAvancar.addEventListener("click", () => {
+    if (cartaoAtual < cartoes.length - 1) {
+      esconderCartaoSelecionado();
+      cartaoAtual++;
+      mostrarCartao(cartaoAtual);
+    }
   });
 
-  btnVoltar.addEventListener("click", function () {
-    if (cartaoAtual === 0) return;
-
-    esconderCartaoSelecionado();
-    cartaoAtual--;
-    mostrarCartao(cartaoAtual);
+  btnVoltar.addEventListener("click", () => {
+    if (cartaoAtual > 0) {
+      esconderCartaoSelecionado();
+      cartaoAtual--;
+      mostrarCartao(cartaoAtual);
+    }
   });
 }
 
-function mostrarCartao(cartaoAtual) {
-  cartoes[cartaoAtual].classList.add("selecionado");
+function mostrarCartao(index) {
+  cartoes[index].classList.add("selecionado");
 }
 
 function esconderCartaoSelecionado() {
@@ -46,38 +45,28 @@ function esconderCartaoSelecionado() {
   }
 }
 
+// Menu dropdown
 function toggleMenu() {
-  var menu = document.getElementById("menuDropdown");
+  const menu = document.getElementById("menuDropdown");
   menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 
 // Fechar o menu se clicar fora dele
-document.addEventListener("click", function(event) {
-  var menu = document.getElementById("menuDropdown");
-  var botao = document.querySelector(".botao");
+document.addEventListener("click", (event) => {
+  const menu = document.getElementById("menuDropdown");
+  const botao = document.querySelector(".botao");
 
   if (!botao.contains(event.target) && !menu.contains(event.target)) {
     menu.style.display = "none";
   }
 });
 
+// Reorganizar elementos no mobile
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 768) {
     const cabecalho = document.querySelector('.cabecalho');
     const menu = document.querySelector('#menuLateral');
     const h2index = document.querySelector('.h2index');
-
-    if (!cabecalho) {
-      console.warn('Elemento .cabecalho não encontrado');
-    }
-
-    if (!menu) {
-      console.warn('Elemento #menuLateral não encontrado');
-    }
-
-    if (!h2index) {
-      console.warn('Elemento .h2index não encontrado');
-    }
 
     if (cabecalho && menu && h2index) {
       h2index.parentNode.insertBefore(menu, h2index);
@@ -85,31 +74,30 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
+// Filtro de busca geral
 function filtroGeral() {
   const termo = document.getElementById("pesquisa").value.toLowerCase();
   const elementos = document.querySelectorAll(".pesquisavel");
 
   elementos.forEach(el => {
-    const texto = el.textContent.toLowerCase();
-    if (texto.includes(termo)) {
-      el.style.display = "block"; // ou "flex", dependendo do seu layout
-    } else {
-      el.style.display = "none";
-    }
+    el.style.display = el.textContent.toLowerCase().includes(termo) ? "block" : "none";
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (window.innerWidth <= 768) {
-    const cabecalho = document.querySelector('.cabecalho');
-    const menu = document.querySelector('#menuLateral');
-    const h2index = document.querySelector('.h2index');
+// Buscar termos no site
+function buscarSite() {
+  const query = document.getElementById('busca').value.toLowerCase();
+  const elements = document.body.getElementsByTagName("*");
 
-    if (cabecalho && menu && h2index) {
-      // Mover o menu para antes do h2
-      h2index.parentNode.insertBefore(menu, h2index);
-    }
+  if (query.length > 0) {
+    Array.from(elements).forEach(el => {
+      if (el.innerText && el.innerText.toLowerCase().includes(query)) {
+        el.style.backgroundColor = "#ffff00"; // Destaque
+      }
+    });
+  } else {
+    Array.from(elements).forEach(el => {
+      el.style.backgroundColor = ""; // Remove destaque
+    });
   }
-});
-
+}

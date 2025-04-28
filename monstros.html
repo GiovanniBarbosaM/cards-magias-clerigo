@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CardMagicD&D</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CardMagicD&D</title>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="src/css/fontes.css" />
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/estilos.css" />
-    <link rel="stylesheet" href="src/css/responsivo.css" />
-  </head>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="src/style/fontes.css">
+  <link rel="stylesheet" href="src/style/reset.css">
+  <link rel="stylesheet" href="src/style/estilos.css">
+  <link rel="stylesheet" href="src/style/responsivo.css">
+</head>
 
-  <body>
-    <!-- Cabeçalho -->
-    <header class="cabecalho" role="banner">
-      <h1 class="titulo">Dungeons and Dragons</h1>
-    </header>
+<body class="pesquisavel">
+  <!-- Cabeçalho -->
+  <header class="cabecalho" role="banner">
+    <h1 class="titulo">Dungeons and Dragons</h1>
+  </header>
 
-    <!-- Menu de Navegação -->
-    <nav
-      class="menu"
-      id="menuLateral"
-      role="navigation"
-      aria-label="Menu de Classes"
-    >
-      <span class="titulo-menu">Menu: </span>
-      <div class="dropdown">
-        <span class="lista">Classes:</span>
-        <a href="clerigo.html">Clérigo</a>
-        <a href="paladino.html">Paladino</a>
-        <a href="ranger.html">Ranger</a>
-        <a href="mago-feiticeiro.html">Mago/Feiticeiro</a>
-
-        <span class="lista">Ajuda:</span>
-        <a href="guias.html">Guias</a>
-        <a href="#">Personagens</a>
-        <a href="#">Dicas de jogo</a>
-        <a href="#">Ferramentas para criars</a>
-
-        <a class="voltarInicio" href="index.html">← Início</a>
-      </div>
-    </nav>
-
-    
-     <!-- Rodapé -->
-     <footer class="footer" role="contentinfo">
-        <p>2025 Giovanni Barbosa</p>
-      </footer>
   
-      <!-- Script principal -->
-      <script src="src/js/index.js"></script>
-  
-      <!-- Script para mover o menu no mobile -->
-      <script>
-        window.addEventListener("DOMContentLoaded", () => {
-          if (window.innerWidth <= 768) {
-            const cabecalho = document.querySelector(".cabecalho");
-            const menu = document.querySelector("#menuLateral");
-            const h2index = document.querySelector(".h2index");
-  
-            if (cabecalho && menu && h2index) {
-              // Mover o menu para antes do h2
-              h2index.parentNode.insertBefore(menu, h2index);
-            }
-          }
-        });
-      </script>
-    </body>
-  </html>
+
+  <!-- Menu de Navegação -->
+  <nav class="menu" id="menuLateral" role="navigation" aria-label="Menu de Classes">
+    <span class="titulo-menu">Menu: </span>
+    <div class="dropdown">
+
+      <span class="lista">Classes:</span>
+      <a href="#">Bardo</a>
+      <a href="clerigo.html">Clérigo</a>
+      <a href="#">Druida</a>
+      <a href="feiticeiro.html">Feiticeiro</a>
+      <a href="#">Mago</a>
+      <a href="paladino.html">Paladino</a>
+      <a href="ranger.html">Ranger</a>
+      
+      
+    <span class="lista">Ajuda:</span>
+      <a href="guias.html">Guias</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="#">Dicas de jogo</a>
+      <a href="#">Ferramentas para criars</a>
+
+      <a class="voltarInicio" href="index.html">← Início</a>
+      
+    </div>
+  </nav>
+
+  <div class="barra-pesquisa">
+    <input type="text" id="busca" placeholder="Pesquisa" oninput="buscarFichas()">
+
+  </div>
+      <!-- Rodapé -->
+  <footer class="footer" role="contentinfo">
+    <p> 2025 Giovanni Barbosa</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="js/index.js"></script>
+  <script src="js/server.js"></script>
+  <script src="js/script.js" defer></script>
+ 
+</body>
+</html>
